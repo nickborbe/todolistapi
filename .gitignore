@@ -9,3 +9,4 @@ npm-debug.log
 
 
 .DS_Store
+#dont commit ds store
