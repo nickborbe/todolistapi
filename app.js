@@ -75,10 +75,10 @@ app.use(passport.session());
 
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000']
+  origin: ['http://localhost:3000', 'http://my-app-name.herokuapp.com']
 }));
 // its going to accept requests as long as they come from localhost:3000 which is where I am planning on the running the react app
-
+// and then we have to add our deployed url as a second location where we want to accept requests
 
 const index = require('./routes/index');
 app.use('/', index);
