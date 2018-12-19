@@ -98,6 +98,8 @@ app.use((req, res, next) => {
   // If no routes match, send them the React HTML.
   res.sendFile(__dirname + "/public/index.html");
 });
-
+// we're going to let the app go through all the other middlewares and then at the end if the 
+// request doesnt get caught by any of the routes, it will render index.html, which is the file
+// that we dragged over from the react project
 
 module.exports = app;
