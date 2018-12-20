@@ -22,6 +22,7 @@ const Task    = require('../models/Task');
 
     router.get('/task/details/:id', (req, res, next)=>{
         // since we are making this route unique by putting the word details in it, you do not need to worry about putting this route at the end of this file
+        // however, if the route is not unique, you need to put it at the end so other routes dont conflict with it
 
         Task.findById(req.params.id)
         // grab the id from req.params and use it to find the task in the db
